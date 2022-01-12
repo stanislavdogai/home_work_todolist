@@ -337,9 +337,50 @@
   "model": "list.task",
   "pk": 1,
   "fields": {
-    "description": "2 + 2",
+    "description": "blabla",
     "status": "new",
+    "detail": "Скоро напишем новое описание",
     "date": null
+  }
+},
+{
+  "model": "list.task",
+  "pk": 2,
+  "fields": {
+    "description": "fafafa",
+    "status": "new",
+    "detail": "Скоро напишем новое описание",
+    "date": null
+  }
+},
+{
+  "model": "list.task",
+  "pk": 3,
+  "fields": {
+    "description": "asasassaasassa",
+    "status": "new",
+    "detail": "Скоро напишем новое описание",
+    "date": null
+  }
+},
+{
+  "model": "list.task",
+  "pk": 4,
+  "fields": {
+    "description": "check",
+    "status": "new",
+    "detail": "checkcheck",
+    "date": null
+  }
+},
+{
+  "model": "list.task",
+  "pk": 5,
+  "fields": {
+    "description": "check date",
+    "status": "in_progress",
+    "detail": "успеем",
+    "date": "2023-01-21"
   }
 }
 ]

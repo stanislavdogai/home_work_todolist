@@ -6,6 +6,10 @@ def home_page(request):
     tasks = Task.objects.all()
     return render(request, 'index.html', {'tasks' : tasks})
 
+def task_view(request, pk):
+    task = get_object_or_404(Task, pk=pk)
+    return render(request, 'view.html', {'task' : task})
+
 def create(request):
     if request.method == 'GET':
         form = TaskForm()
@@ -16,9 +20,11 @@ def create(request):
             description = form.cleaned_data.get('description')
             status = form.cleaned_data.get('status')
             date = form.cleaned_data.get('date')
+            detail = form.cleaned_data.get('detail')
             Task.objects.create(description=description,
                                status=status,
-                               date=date)
+                               date=date,
+                                detail=detail)
             return redirect('home_page')
         return render(request, 'create.html', {'form' : form})
 

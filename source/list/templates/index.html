@@ -10,14 +10,14 @@
 {% block content %}
     {% if tasks %}
     {% for task in tasks %}
-        <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-            <div class="card-header">Задача №: {{ task.pk }}</div>
+        <div class="card text-white bg-secondary mb-3" style="max-width: 40rem;">
+            <div class="card-header"><a href="{% url 'view' task.pk %}" class="text-white">Задача №: {{ task.pk }}</a></div>
             <div class="card-body">
                 {% if task.date %}
                     <h5 class="card-title">Нужно решить до {{ task.date }}</h5>
                 {% endif %}
             <p class="card-text">{{ task.description }}</p>
-                <a href="{% url 'delete' task.pk  %} ">Удалить задачу</a>
+                <a href="{% url 'delete' task.pk  %} " class="text-white">Удалить задачу</a>
             </div>
         </div>
     {% endfor %}
