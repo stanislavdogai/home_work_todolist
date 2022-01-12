@@ -8,3 +8,5 @@ class TaskForm(forms.Form):
     date = forms.DateField(required=False, label='Дедлайн', widget=widgets.DateTimeInput(attrs={"type": "date"}))
     detail = forms.CharField(max_length=2000, required=False, label='Подробное описание')
 
+class TaskFormDelete(forms.Form):
+    confirm = forms.CharField(max_length=3, required=True, label='Подтверждение удаления')

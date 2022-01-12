@@ -14,6 +14,8 @@
       <footer class="blockquote-footer">Дедлайн: {{ task.date }}</footer>
         {% endif %}
     </blockquote>
+  <a href="{% url 'delete' task.pk  %} " class="btn btn-secondary">Удалить задачу</a>
+  <a href="{% url 'update' task.pk  %} " class="btn btn-secondary">Отредактировать задачу</a>
   </div>
 </div>
 {% endblock %}

@@ -18,6 +18,7 @@
                 {% endif %}
             <p class="card-text">{{ task.description }}</p>
                 <a href="{% url 'delete' task.pk  %} " class="text-white">Удалить задачу</a>
+            <a href="{% url 'update' task.pk  %} " class="text-white">Редактировать задачу</a>
             </div>
         </div>
     {% endfor %}
